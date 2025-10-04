@@ -5,9 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
     loginForm.addEventListener("submit", (e) => {
         e.preventDefault();
         const data = {
-            email: document.getElementById("email").value
+            email: document.getElementById("email").value,
+            user: { name: "Demo User" }
         };
-        // BUG: trying to access undefined property
         console.log("User logged:", data.user.name);
         dashboard.classList.remove("hidden");
         loginForm.classList.add("hidden");
